@@ -33,9 +33,9 @@ int main() {
             <<"1. Add Task\n"
             <<"2. View Tasks\n"
             <<"3. Delete Task\n"
-            <<"5. Exit\n";
+            <<"4. Exit\n";
 
-        int choice = validateChoice(1, 5, "Enter your choice (1-5): ");
+        int choice = validateChoice(1, 5, "Enter your choice (1-4): ");
 
         if (choice == 1) {
             cout << "Add Task selected." << endl;
@@ -46,7 +46,7 @@ int main() {
         } else if (choice == 3) {
             cout << "Delete Task selected." << endl;
             // Delete task logic here
-        } else if (choice == 5) {
+        } else if (choice == 4) {
             cout << "Exiting Task Manager. Goodbye!" << endl;
             break;
         }
