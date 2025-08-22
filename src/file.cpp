@@ -60,3 +60,14 @@ void File::replaceLine(int lineNumber, const std::string& newLine) {
     }
     file.close();
 }
+
+std::string File::getLine(int lineNumber) const {
+    if (lineCount == 0) {
+        return ""; // No lines to get
+    }
+    std::vector<std::string> lines = read();
+    if (lineNumber < 1 || lineNumber > lines.size()) {
+        return ""; // Line number out of range
+    }
+    return lines[lineNumber - 1];
+}

@@ -18,6 +18,8 @@ class File {
         void addLine(const std::string& line);
         void deleteLine(int lineNumber);
         void replaceLine(int lineNumber, const std::string& newLine);
+
+        std::string getLine(int lineNumber) const;
 };
 
 #endif // FILE_H
