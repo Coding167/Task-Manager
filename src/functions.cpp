@@ -1,4 +1,5 @@
 #include "../headers/functions.h"
+#include <sstream>
 
 // Function to validate user input within a specified range
 int validateChoice(int start, int end, const std::string& message) {
@@ -19,4 +20,18 @@ int validateChoice(int start, int end, const std::string& message) {
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
     }
+}
+
+// Function to split a string by a given delimiter
+std::vector<std::string> split(const std::string& str, char delimiter) {
+    if (str.empty()) {
+        return {};
+    }
+    std::vector<std::string> fields;
+    std::string field;
+    std::istringstream ss(str);
+    while (std::getline(ss, field, delimiter)) {
+        fields.push_back(field);
+    }
+    return fields;
 }
