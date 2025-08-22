@@ -6,7 +6,7 @@ class Task {
     private:
         int id;
         std::string description;
-        bool isCompleted;
+        int status;
     public:
         Task();
         Task(int id);

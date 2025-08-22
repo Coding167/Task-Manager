@@ -2,6 +2,7 @@
 #include <limits>
 #include "../headers/file.h"
 #include "../headers/functions.h"
+#include "../headers/task.h"
 using namespace std;
 
 int main() {

@@ -35,3 +35,21 @@ std::vector<std::string> split(const std::string& str, char delimiter) {
     }
     return fields;
 }
+
+// Function to convert a string to an integer
+int stringToInt(const std::string& str) {
+    std::string digits = "";
+
+    for (char ch : str) {
+        if (std::isdigit(ch)) {
+            digits += ch;
+        }
+    }
+
+    // Handle the case where no digits were found
+    if (digits.empty()) {
+        return 0; // or throw custom error or return -1, depending on what you want
+    }
+
+    return std::stoi(digits);
+}
