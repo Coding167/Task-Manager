@@ -1,28 +1,8 @@
 #include <iostream>
 #include <limits>
 #include "../headers/file.h"
+#include "../headers/functions.h"
 using namespace std;
-
-// Function to validate user input within a specified range
-int validateChoice(int start, int end, const string& message) {
-    int choice;
-    while (true) {
-        cout << message;
-        cin >> choice;
-
-        // check if input is valid (numeric and in range)
-        if (!cin.fail() && choice >= start && choice <= end) {
-            return choice;
-        } else {
-            cout << "Invalid input! Please enter a number between " 
-                 << start << " and " << end << ".\n";
-
-            // clear error and ignore bad input
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        }
-    }
-}
 
 int main() {
     // welcome message
