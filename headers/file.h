@@ -6,6 +6,7 @@
 class File {
     private:
         std::string path;
+        int lineCount = 0;
     public:
         File(): path("") {}
         File(const std::string& filePath);
