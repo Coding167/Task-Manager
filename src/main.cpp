@@ -14,10 +14,11 @@ int main() {
         cout<<"Menu:\n"
             <<"1. Add Task\n"
             <<"2. View Tasks\n"
-            <<"3. Delete Task\n"
-            <<"4. Exit\n";
+            <<"3. Complete Task\n"
+            <<"4. Delete Task\n"
+            <<"5. Exit\n";
 
-        int choice = validateChoice(1, 5, "Enter your choice (1-4): ");
+        int choice = validateChoice(1, 5, "Enter your choice (1-5): ");
 
         if (choice == 1) {
             cout << "Add Task selected." << endl;
@@ -29,6 +30,9 @@ int main() {
             cout << "Delete Task selected." << endl;
             // Delete task logic here
         } else if (choice == 4) {
+            cout << "Complete Task selected." << endl;
+            // Complete task logic here
+        } else {
             cout << "Exiting Task Manager. Goodbye!" << endl;
             break;
         }
